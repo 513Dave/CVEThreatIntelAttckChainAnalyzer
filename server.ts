@@ -332,7 +332,7 @@ Perform deep threat intelligence correlation. Your response MUST detail:
       return JSON.parse(text);
     }
   } catch (err) {
-    console.warn(`Gemini dynamic lookup failed for ${cveId}, returning local heuristic profile:`, err);
+    console.warn("Gemini dynamic lookup failed for %s, returning local heuristic profile:", cveId, err);
   }
 
   // Fallback if Gemini fails or times out
