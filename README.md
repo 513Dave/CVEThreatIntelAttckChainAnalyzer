@@ -1,20 +1,6 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/4aa383fe-5f4e-41c0-9a2c-e7c4dd014bca
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Built to combine CVE, CWE, EPSS, CISA Kev Listing, Target ransomware campaigs, Threat Intel information (known actors, Industry targets, Geographic targets, MITRE ATT&CK Matrix references) as well as suggested and known remediation actions.
+Combines threats that can be combined in a daisy chain attack and ranks them 1-N (1 being most severe threat) and outlines what the threat of each action would be. Uses a weighted scoring model of each combined pieces of information and ranks them for prioritization. 
+Prioritizes individual threats on a 1-N basis, using the same scoring model as above
+Can Manually input CVE or CWE info or upload a spreadsheet to analyze.
+---Known Issues as of 5/27/2026---
+With a KEV library of 1622 items, processing time was 13 minutes for the full research and combining of daisy chain attacks. Looking for suggestions on how to speed this up
