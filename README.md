@@ -1,11 +1,20 @@
-This utility is written in Python. It was designed to take several factors into consideration:
-- CVE and CWE information
-- EPSS Model scoring
-- CISA Kev Listing
-- Known Associated Threat Actors
-- Target Sectors
-- Target Countries
-- Mitre ATT&CK Matrix Reference
-This utility also takes into account CWE & CVE combinations that can be used to daisy chain multiple functions to establish a foodhold, lateral movement and other factors.
-This Utility takes a weighted scoring model and prioritizes combined daisy chain attacks and individual priorities on a 1-N basis (One being the most urgent)
-There is also a window that combines each CVE as a Threat Dossier and offers suggested remediation efforts. 
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/4aa383fe-5f4e-41c0-9a2c-e7c4dd014bca
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

@@ -1,0 +1,6 @@
+{
+  "name": "CVE Threat Intelligence & Attack Chain Analyzer",
+  "description": "Deep vulnerability analysis, exploit checking, threat actor profiling, and attack daisy-chain vector detection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
