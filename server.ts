@@ -75,7 +75,12 @@ function getAiClient(): GoogleGenAI | null {
 // Fetch CVSS / CWE / Summary from CIRCL public CVE API
 async function fetchCveDetails(cveId: string) {
   try {
-    const url = `https://cve.circl.lu/api/cve/${cveId.toUpperCase().trim()}`;
+    const normalizedCveId = cveId.toUpperCase().trim();
+    if (!/^CVE-\d{4}-\d{4,9}$/.test(normalizedCveId)) {
+      throw new Error(`Invalid CVE format: ${cveId}`);
+    }
+    const safeCvePath = encodeURIComponent(normalizedCveId);
+    const url = `https://cve.circl.lu/api/cve/${safeCvePath}`;
     const response = await fetch(url, { headers: { 'Accept': 'application/json' } });
     if (!response.ok) {
       throw new Error(`CIRCL API responded with status ${response.status}`);
